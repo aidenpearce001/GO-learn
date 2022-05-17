@@ -2,6 +2,12 @@ package main
 
 import "fmt"
 
+type coord struct {
+	lat, long float64
+}
+
+var m map[string]coord
+
 func main() {
 	dict1:=make(map[string]int)
 
@@ -22,4 +28,10 @@ func main() {
 
 	dict2:=map[string]int{"a":12,"b":23}
 	fmt.Println(dict2)
+
+	m = make(map[string]coord)
+	m["London"] = coord{40.68433,-65.5345435,}
+
+	fmt.Println(m)
+	fmt.Println(m["London"])
 }

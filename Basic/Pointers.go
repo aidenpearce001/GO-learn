@@ -13,4 +13,14 @@ func main() {
 	p=&j
 	*p=*p/37
 	fmt.Println(j)
+
+	var b *int
+
+	if b == nil {
+		fmt.Println("b :",b)
+
+		b =&i
+		fmt.Println("After init :",b)
+		fmt.Println("After init :",*b)
+	}
 }
